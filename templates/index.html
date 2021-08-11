@@ -21,9 +21,11 @@
       </div>
     </div>
     <div class="card-body">{{ tweet.body }}</div>
+    {% if tweet.image.url %}
     <div class="card-image">
       <img src="{{ tweet.image.url }}" alt="" />
     </div>
+    {% endif %}
     <div class="card-footer">
       <a href="/like/{{ tweet.id }}">
         <img src="{% static 'img/like.png' %}" alt="" />
