@@ -55,7 +55,10 @@ section {
   padding: 10px;
   position: relative;
 }
-
+.like {
+  padding: 10px;
+  color: rgb(90, 90, 90);
+}
 .card-image img {
   width: 100%;
   height: 50%;
