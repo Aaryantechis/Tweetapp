@@ -12,6 +12,13 @@
   {% for tweet in tweets %}
   <div class="card">
     <div class="card-header">
+        <img class="menu-icon" src="{% static 'img/menu.png' %}" alt="">
+      <div class="popup">
+        <ul>
+          <li><a href="/edit/{{ tweet.id }}"> Edit</a></li>
+          <li><a href="/delete/{{ tweet.id }}"> Delete</a></li>
+        </ul>
+      </div>
       <div class="user-image">
         <img src="{% static 'img/user.png'%}" alt="" />
       </div>
@@ -31,10 +38,6 @@
         <img src="{% static 'img/like.png' %}" alt="" />
       </a>
       <div class="footer-item">{{ tweet.like_count}} Like</div>
-      <div class="footer-item">
-        <a href="/delete/{{ tweet.id }}"> Delete</a>
-      </div>
-      <div class="footer-item"><a href="/edit/{{ tweet.id }}"> Edit</a></div>
     </div>
   </div>
   {% endfor %}
@@ -48,3 +51,4 @@
   {% endfor %}
 </div>
  -->
+
