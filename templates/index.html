@@ -1,0 +1,48 @@
+{% extends 'base.html' %}{% block content %} {% load static %}
+<section>
+  <div class="card">
+    <form action="/" method="POST" enctype="multipart/form-data">
+      {%csrf_token %}
+      <input type="text" name="name" placeholder="Name" required />
+      <input name="body" rows="3" placeholder="Tell us anything" required></input>
+      <input type="file" name="image" />
+      <input type="submit" value="Post" />
+    </form>
+  </div>
+  {% for tweet in tweets %}
+  <div class="card">
+    <div class="card-header">
+      <div class="user-image">
+        <img src="{% static 'img/user.png'%}" alt="" />
+      </div>
+      <div class="card-heading">
+        {{ tweet.name }}
+        <div class="card-date">{{tweet.created_at}}</div>
+      </div>
+    </div>
+    <div class="card-body">{{ tweet.body }}</div>
+    <div class="card-image">
+      <img src="{{ tweet.image.url }}" alt="" />
+    </div>
+    <div class="card-footer">
+      <a href="/like/{{ tweet.id }}">
+        <img src="{% static 'img/like.png' %}" alt="" />
+      </a>
+      <div class="footer-item">{{ tweet.like_count}} Like</div>
+      <div class="footer-item">
+        <a href="/delete/{{ tweet.id }}"> Delete</a>
+      </div>
+      <div class="footer-item"><a href="/edit/{{ tweet.id }}"> Edit</a></div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}
+<!-- 
+    <div>
+  {% for tweet in tweets %} {{tweet.name}} {{tweet.body}} <br />
+  <img src="{{ tweet.image.url }}" alt="" />
+  {{tweet.image}} {{tweets.like_count}} {{tweet.created_at}} <br />
+  {% endfor %}
+</div>
+ -->
