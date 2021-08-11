@@ -83,11 +83,11 @@ WSGI_APPLICATION = "TwitterClone.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "da3scur36saur9",
-        "USER": "hwkfmdapolnqdx",
-        "HOST": "ec2-35-172-16-31.compute-1.amazonaws.com",
+        "NAME": "d2un71tlqk30cd",
+        "USER": "goufqvspsrxnnm",
+        "HOST": "ec2-44-196-146-152.compute-1.amazonaws.com",
         "PORT": 5432,
-        "PASSWORD": "2f80facaac9cbee65d95a281789a8b535041c3f45b1ea32c0dbc0f6e3aa7b090",
+        "PASSWORD": "1afc4dbbec30b7265ed1255eb5e21246a6cb6fc02e91e39c0bacc1ae01cd59dd",
         # "ENGINE": "django.db.backends.sqlite3",
         # "NAME": BASE_DIR / "db.sqlite3",
     }

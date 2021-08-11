@@ -110,4 +110,4 @@ wcwidth==0.2.5
 Werkzeug==0.16.1
 whitenoise==5.2.0
 WTForms==2.3.3
-yarl==1.6.3
+yarl==1.6.3`
