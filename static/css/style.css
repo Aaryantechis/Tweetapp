@@ -147,6 +147,23 @@ ul {
   flex-direction: row;
 }
 
+.editfooter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.editfooter a {
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px 25px;
+  background-color: grey;
+}
+.editfooter input {
+  width: 100px;
+  background-color: grey;
+}
 /* 
 .editphoto {
   /* justify-self: center; */

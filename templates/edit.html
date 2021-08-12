@@ -26,7 +26,10 @@
         class="upload"
         value="{{edittweet.image.url}}"
       />
-      <input type="submit" value="Post" />
+      <div class="editfooter">
+        <input type="submit" value="Post" />
+        <a href="{% url 'index' %}">Cancel</a>
+      </div>
     </form>
   </div>
 </section>
